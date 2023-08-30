@@ -9,6 +9,7 @@ library(grid)
 library(png)
 library(sjPlot) 
 library(ggh4x)
+library(ggbeeswarm)
 
 # ________________----
 
@@ -162,3 +163,4 @@ mod4<-glm(Value~Promoter+Context,family=Gamma(link="log"),
           data=norsp[-c(530,532, 534, 535,1113,1132),])
 
 drop1(mod4, test = "F")
+
