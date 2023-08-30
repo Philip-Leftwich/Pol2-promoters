@@ -76,16 +76,16 @@ pilotdataplot <- pilotdata %>%
 
 supp.labs <-as_labeller(c(`Aag2..Ae..aegypti.`="A) Aag2 cells", 
                           `C6.36..Ae..albopictus.`= "B) C6.36 cells",
-                          `Hsu..Cu..quinquefasciatus.`="C) Hsu cells",
-                          `Sf9..S..frugiperda.`="D) Sf9 cells", 
-                          `U4.4..Ae..albopictus.`="E) U4.4 cells"))
+                          `Hsu..Cu..quinquefasciatus.`="D) Hsu cells",
+                          `Sf9..S..frugiperda.`="F) Sf9 cells", 
+                          `U4.4..Ae..albopictus.`="C) U4.4 cells"))
 
 limits_fun <- function(x) {
   if (max(x) > 75) {
     c(1, 300)
   } else {
     if (max(x) < 10) {
-      c(0.1, 3)
+      c(0.1, 10)
     }
     else{
     c(0.1, 30)
